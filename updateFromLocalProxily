@@ -1,0 +1,10 @@
+cd ../proxily
+yarn build
+rm -rf node_modules
+cd ../todo_web_classic
+yarn install
+yarn upgrade proxily
+cd ../proxily
+yarn install
+cd ../todo_web_classic
+yarn start
