@@ -1,10 +1,9 @@
-import {useObservableProp, useObservables} from "proxily";
+import {useObservableProp, observer} from "proxily";
 import React from "react";
 import {todos} from "../store";
 import {Filters} from "../store/Todos";
 
-export function Footer() {
-    useObservables();
+export const Footer = observer(function Footer() {
 
     const [filter, setFilter] = useObservableProp(todos.filter);
     const {activeTodos, completedTodos, clearCompleted, items} = todos;
@@ -41,5 +40,5 @@ export function Footer() {
             }
         </>
     )
-}
+});
 

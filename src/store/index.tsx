@@ -1,4 +1,4 @@
 import {Todos} from "./Todos";
-import {makeObservable} from "proxily";
+import {observable} from "proxily";
 
-export const todos = makeObservable(new Todos());
+export const todos = observable(new Todos());

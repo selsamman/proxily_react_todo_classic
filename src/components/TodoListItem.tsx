@@ -1,10 +1,9 @@
 import {Todo} from "../store/Todo";
-import {useObservableProp, useObservables} from "proxily";
+import {useObservableProp, observer} from "proxily";
 import React from "react";
 import {todos} from "../store";
 
-export function TodoListItem({todo}: { todo: Todo }) {
-    useObservables();
+export const TodoListItem = observer(function TodoListItem({todo}: { todo: Todo }) {
 
     const {completed, toggleComplete} = todo;
     const [editing, setEditing] = useObservableProp(todo.editing)
@@ -29,4 +28,4 @@ export function TodoListItem({todo}: { todo: Todo }) {
             }
         </li>
     )
-}
+});

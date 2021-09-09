@@ -1,10 +1,9 @@
-import {useObservables} from "proxily";
+import {observer} from "proxily";
 import React from "react";
 import {todos} from "../store";
 import {TodoListItem} from "./TodoListItem";
 
-export function TodoList() {
-    useObservables();
+export const TodoList = observer(() => {
     const {filteredTodos, items, completedTodos, completeAll} = todos;
 
     return (
@@ -23,4 +22,4 @@ export function TodoList() {
             </ul>
         </>
     )
-}
+});

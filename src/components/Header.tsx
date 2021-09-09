@@ -1,10 +1,8 @@
-import {useObservables} from "proxily";
+import {observer} from "proxily";
 import React, {useState} from "react";
 import {todos} from "../store";
 
-export function Header() {
-    useObservables();
-
+export const Header = observer(function Header() {
     const {addTodo} = todos
     const [text, setText] = useState('');
     const save = (e : any) => setText(e.target.value)
@@ -22,5 +20,4 @@ export function Header() {
                    value={text} onBlur={save} onChange={save} onKeyDown={checkForEnter}/>
         </header>
     )
-}
-
+});
