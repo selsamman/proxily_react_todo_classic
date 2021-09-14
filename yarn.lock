@@ -8785,8 +8785,10 @@ prop-types@^15.7.2:
     object-assign "^4.1.1"
     react-is "^16.8.1"
 
-"proxily@file:../proxily":
-  version "0.1.0"
+proxily@^0.9.31-alpha:
+  version "0.9.31-alpha"
+  resolved "https://registry.yarnpkg.com/proxily/-/proxily-0.9.31-alpha.tgz#5528b70fbe93b975b63564387c61798d5621543f"
+  integrity sha512-kq2r4xdgtftA7ikSZELV5PL1sp1XY2N6ykq48T/JJWCwBoMPPs7EGb2onPH1t4ULnsnFL/CM9btSW/azn2b9kg==
 
 proxy-addr@~2.0.5:
   version "2.0.6"
